@@ -1,0 +1,18 @@
+background=background.png
+enemies=20
+enemy_speed=1.0
+D   AEKLKBCHBAK
+E  SHEX       E
+B HBCBLHI   A G
+H       BC    H
+IJ L  HJB  C  A
+EKLGH B  F   JE
+L     BA   BAGH
+I  CA B   AG PH
+EK    IBD     E
+L  CGHBLAGH   B
+J            EF
+HJA G   LJEL  H
+I      F     PG
+EP   H     KBAB
+AFGIACLBCELJDEG

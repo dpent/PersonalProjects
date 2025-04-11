@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="gameobject.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="gamestate.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="level.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="level1.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="gameLevel.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="level2.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="endLevel.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="level0.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="highwaylvl.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="guide.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="pause.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="box.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="gameobject.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="gamestate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="level.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="finishBlock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="block.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="powerupBlock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="level1.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="gameLevel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="level2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="enemyHorizontalBlock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="endLevel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="level0.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="highwaylvl.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="guide.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="pause.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="enemyVertical.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="knifepowerupBlock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="carKeyBlock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{8d59cb3a-0007-41f8-91bb-d073710e638d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4685ed82-c4d0-4bca-b632-c9e43054ed5e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

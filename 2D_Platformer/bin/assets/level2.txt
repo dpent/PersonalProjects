@@ -1,0 +1,16 @@
+background=background.png
+enemies=20
+enemy_speed=1.0
+AFGIACLBDCHB    KB
+C       P GL S   K
+E       A LHIKEK A
+G I E D        H A
+G DHBBHCHBAE   H B
+A       LH BF  A L
+G       CA    JA D
+CHEKLKB IB   EKP L
+B   B   H   BJEL D
+B E   C EFH    H K
+L ELAGHIJEBD   A D
+C        XAEK    B
+CELJDEGDEFHJEAGHIG

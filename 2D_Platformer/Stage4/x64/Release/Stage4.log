@@ -1,0 +1,21 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(520,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  level2.cpp
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(113,56): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(114,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(115,57): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(116,57): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(117,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(118,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(119,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(120,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(121,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(122,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(123,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(124,56): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\Stage4\level2.cpp(125,56): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating code
+  3 of 640 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Stage4.vcxproj -> C:\Users\konst\OneDrive\Υπολογιστής\3ο ΕΞΑΜΗΝΟ\ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ C\Stage4\Stage4\Finish\bin\Stage4.exe
