@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity alu16 is
+port( a: in std_logic_vector(15 to 0);
+		b: in std_logic_vector(15 to 0);
+		Result: out std_logic_vector(15 to 0);
+		Overflow: out std_logic;
+		Opcode: in std_logic_vector(2 to 0);
+end alu16
+
+architecture structural of alu16 is
+
+component alu1 is
+port(a, b, cin, AInvert, BInvert: in std_logic;
+		Operation: in std_logic_vector(1 to 0);
+		Result, cout: out std_logic);
+end component;

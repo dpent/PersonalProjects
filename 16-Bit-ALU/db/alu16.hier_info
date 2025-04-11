@@ -1,0 +1,978 @@
+|alu16
+a[0] => alu1:ALU_0.a
+a[1] => alu1:ALU_1.a
+a[2] => alu1:ALU_2.a
+a[3] => alu1:ALU_3.a
+a[4] => alu1:ALU_4.a
+a[5] => alu1:ALU_5.a
+a[6] => alu1:ALU_6.a
+a[7] => alu1:ALU_7.a
+a[8] => alu1:ALU_8.a
+a[9] => alu1:ALU_9.a
+a[10] => alu1:ALU_10.a
+a[11] => alu1:ALU_11.a
+a[12] => alu1:ALU_12.a
+a[13] => alu1:ALU_13.a
+a[14] => alu1:ALU_14.a
+a[15] => alu1:ALU_15.a
+b[0] => alu1:ALU_0.b
+b[1] => alu1:ALU_1.b
+b[2] => alu1:ALU_2.b
+b[3] => alu1:ALU_3.b
+b[4] => alu1:ALU_4.b
+b[5] => alu1:ALU_5.b
+b[6] => alu1:ALU_6.b
+b[7] => alu1:ALU_7.b
+b[8] => alu1:ALU_8.b
+b[9] => alu1:ALU_9.b
+b[10] => alu1:ALU_10.b
+b[11] => alu1:ALU_11.b
+b[12] => alu1:ALU_12.b
+b[13] => alu1:ALU_13.b
+b[14] => alu1:ALU_14.b
+b[15] => alu1:ALU_15.b
+Result[0] << alu1:ALU_0.Result
+Result[1] << alu1:ALU_1.Result
+Result[2] << alu1:ALU_2.Result
+Result[3] << alu1:ALU_3.Result
+Result[4] << alu1:ALU_4.Result
+Result[5] << alu1:ALU_5.Result
+Result[6] << alu1:ALU_6.Result
+Result[7] << alu1:ALU_7.Result
+Result[8] << alu1:ALU_8.Result
+Result[9] << alu1:ALU_9.Result
+Result[10] << alu1:ALU_10.Result
+Result[11] << alu1:ALU_11.Result
+Result[12] << alu1:ALU_12.Result
+Result[13] << alu1:ALU_13.Result
+Result[14] << alu1:ALU_14.Result
+Result[15] << alu1:ALU_15.Result
+Overflow << Overflow.DB_MAX_OUTPUT_PORT_TYPE
+Opcode[0] => Mux0.IN10
+Opcode[0] => Mux1.IN10
+Opcode[0] => Mux3.IN10
+Opcode[0] => Mux4.IN10
+Opcode[1] => Mux0.IN9
+Opcode[1] => Mux1.IN9
+Opcode[1] => Mux2.IN5
+Opcode[1] => Mux3.IN9
+Opcode[1] => Mux4.IN9
+Opcode[2] => Mux0.IN8
+Opcode[2] => Mux1.IN8
+Opcode[2] => Mux2.IN4
+Opcode[2] => Mux3.IN8
+Opcode[2] => Mux4.IN8
+
+
+|alu16|alu1:ALU_0
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_0|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_0|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_0|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_0|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_0|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_1
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_1|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_1|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_1|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_1|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_1|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_2
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_2|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_2|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_2|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_2|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_2|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_3
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_3|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_3|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_3|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_3|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_3|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_4
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_4|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_4|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_4|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_4|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_4|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_5
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_5|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_5|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_5|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_5|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_5|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_6
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_6|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_6|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_6|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_6|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_6|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_7
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_7|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_7|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_7|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_7|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_7|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_8
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_8|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_8|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_8|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_8|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_8|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_9
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_9|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_9|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_9|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_9|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_9|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_10
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_10|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_10|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_10|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_10|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_10|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_11
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_11|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_11|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_11|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_11|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_11|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_12
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_12|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_12|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_12|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_12|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_12|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_13
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_13|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_13|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_13|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_13|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_13|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_14
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_14|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_14|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_14|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_14|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_14|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_15
+a => tempa.DATAB
+a => tempa.DATAA
+b => tempb.DATAB
+b => tempb.DATAA
+cin => fullAdder:u2.cin
+AInvert => tempa.OUTPUTSELECT
+BInvert => tempb.OUTPUTSELECT
+Operation[0] => mux_4to1:u4.g1
+Operation[1] => mux_4to1:u4.g2
+Result <= mux_4to1:u4.z
+cout <= fullAdder:u2.cout
+
+
+|alu16|alu1:ALU_15|and_gate2:u0
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_15|or_gate2:u1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_15|fullAdder:u2
+a => Sum.IN0
+a => cout.IN0
+b => Sum.IN1
+b => cout.IN1
+cin => Sum.IN1
+cin => cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_15|xor_gate2:u3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu16|alu1:ALU_15|mux_4to1:u4
+a => z.DATAB
+b => z.DATAB
+c => z.DATAB
+d => z.DATAA
+g1 => process_0.IN0
+g1 => process_0.IN0
+g1 => process_0.IN0
+g2 => process_0.IN1
+g2 => process_0.IN1
+g2 => process_0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

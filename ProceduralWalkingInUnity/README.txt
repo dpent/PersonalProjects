@@ -1,0 +1,1 @@
+In order for this to work you will have to download Unity and then set up a rig with TwoBoneIKConstraints. You should watch a video, but if you manage to set it up then all you have to do is add the leg targets to the list called targets and then it should work fine.

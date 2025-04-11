@@ -1,0 +1,22 @@
+library IEEE;
+use STD_LOGIC_1164.all;
+
+
+Entity alu1 is
+port( a, b, Carryin, Operation: in std_logic;
+			Carryout, Result: out std_logic);
+end alu1;
+
+architecture structural of alu1 is
+
+component and2
+port(a, b: in std_logic;
+		R: out std_logic);
+end component;
+
+
+signal R: std_logic;
+
+begin
+
+g1: and2 port map(a=>a, b=>b, 
